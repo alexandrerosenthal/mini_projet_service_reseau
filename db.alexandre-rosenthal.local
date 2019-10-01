@@ -1,7 +1,7 @@
 ;
 ; BIND data file for local loopback interface
 ;
-ORIGIN alexandre-rosenthal.local
+$ORIGIN alexandre-rosenthal.local
 $TTL	604800
 @	IN	SOA	alexandre-rosenthal.local. root.alexandre-rosenthal.local. (
 		       20190110		; Serial
