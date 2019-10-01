@@ -9,6 +9,7 @@ $TTL	604800
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-@	IN	MX	0	imap.alexandre-rosenthal.local
-@	IN	MX	0	pop.alexandre-rosenthal.local
-@	IN	MX	0	smtp.alexandre-rosenthal.local
+@	IN	NS	serv.alexandre-rosenthal.local
+serv	IN	A	10.202.11.30
+@	IN	MX	serv.alexandre-rosenthal.local
+mail	IN	CNAME	serv

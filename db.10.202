@@ -10,3 +10,5 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 @	IN	NS	debian.alexandre-rosenthal.local.
+$ORIGIN 202.10.in-addr.arpa.
+30.11 IN PTR debian.alexandre-rosenthal.local.
