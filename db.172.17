@@ -1,0 +1,15 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL 1h;
+@	IN	SOA	debian.alexandre-rosenthal.local mail.alexandre-rosenthal.local (
+		       20190110		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+alexandre-rosenthal.local	IN	NS	debian.alexandre-rosenthal.local
+debian.alexandre-rosenthal.local	IN	A	172.17.0.2
+
+2 IN PTR debian.alexandre-rosenthal.local

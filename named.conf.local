@@ -6,11 +6,13 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "alexandre-rosenthal.local" {
+zone "alexandre-rosentham.local" {
 	type master;
 	file "/etc/bind/db.alexandre-rosenthal.local";
 };
-zone "202.10.in-addr.arpa" {
+
+
+zone "17.172.in-addr.arpa" {
 	type master;
-	file "/etc/bind/db.10.202";
+	file "/etc/bind/db.172.17";
 };

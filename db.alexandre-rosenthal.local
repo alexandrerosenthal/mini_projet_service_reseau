@@ -1,16 +1,20 @@
 ;
 ; BIND data file for local loopback interface
 ;
-$ORIGIN alexandre-rosenthal.local
-$TTL	604800
-@	IN	SOA	alexandre-rosenthal.local. root.alexandre-rosenthal.local. (
-		       20190110		; Serial
+$TTL	1h ;
+@	IN	SOA	debian.alexis-pages.local. email.alexis-pages.local. (
+			2019100101      ; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
-;
-@	IN	NS	serv.alexandre-rosenthal.local
-serv	IN	A	10.202.11.30
-@	IN	MX	serv.alexandre-rosenthal.local
-mail	IN	CNAME	serv
+
+alexis-pages.local.		IN	NS	debian.alexis-pages.local.
+@       IN      NS               debian.alexis-pages.local.
+debian	IN	A	172.17.0.2
+email   IN      A  	172.17.0.2
+smtp    IN      CNAME	 email
+pop     IN      CNAME    smtp
+imap    IN      CNAME    pop
+@       IN      MX      0               email.alexis-pages.local.
+
